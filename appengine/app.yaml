@@ -1,0 +1,18 @@
+application: uberapi-example
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /.*
+  script: routes.app
+
+libraries:
+- name: ssl
+  version: latest
+
+env_variables:
+  UBER_CLIENT_ID: 'yourclientid'
+  UBER_CLIENT_SECRET: 'yourclientsecret'
+  UBER_REDIRECT_URI: 'https://example.appspot.com/oauth/callback'
