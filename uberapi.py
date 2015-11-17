@@ -170,6 +170,7 @@ class UberAPI(object):
                                   client_id=self.client_id,
                                   client_secret=self.client_secret,
                                   grant_type='authorization_code',
+                                  redirect_uri=self.redirect_uri,
                                   code=code)
 
     def refresh_token(self, refresh_token):
